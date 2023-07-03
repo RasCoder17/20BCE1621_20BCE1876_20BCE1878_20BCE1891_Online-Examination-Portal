@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentLogInFragment">
+
+    <fragment
+        android:id="@+id/studentSignup"
+        android:name="com.maricoolsapps.studentapp.ui.StudentSignUp"
+        android:label="fragment_student_signup"
+        tools:layout="@layout/fragment_student_signup" />
+    <fragment
+        android:id="@+id/studentLogInFragment"
+        android:name="com.maricoolsapps.studentapp.ui.StudentLogInFragment"
+        android:label="student_log_in_fragment"
+        tools:layout="@layout/student_log_in_fragment">
+        <action
+            android:id="@+id/action_studentLogInFragment_to_studentSignup"
+            app:destination="@id/studentSignup" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.maricoolsapps.studentapp.ui.MainFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_mainQuiz"
+            app:destination="@id/mainQuiz" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainQuiz"
+        android:name="com.maricoolsapps.studentapp.ui.MainQuizFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_main_quiz" >
+        <action
+            android:id="@+id/action_mainQuiz_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:popUpTo="@id/mainQuiz"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.maricoolsapps.studentapp.ui.QuizResultFragment"
+        android:label="Quiz Result"
+        tools:layout="@layout/fragment_quiz_result" >
+        <action
+            android:id="@+id/action_quizResultFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.maricoolsapps.studentapp.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_changeProfileFragment"
+            app:destination="@id/changeProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changeEmailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/changeProfileFragment"
+        android:name="com.maricoolsapps.studentapp.ui.ChangeProfileFragment"
+        android:label="Change"
+        tools:layout="@layout/fragment_change_profile">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/changeEmailFragment"
+        android:name="com.maricoolsapps.studentapp.ui.ChangeEmailFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/savedResultFragment"
+        android:name="com.maricoolsapps.studentapp.ui.SavedResultFragment"
+        android:label="Saved Result"
+        tools:layout="@layout/fragment_saved_result" />
+    <fragment
+        android:id="@+id/noticeFragmentStudent"
+        android:name="com.maricoolsapps.studentapp.ui.NoticeFragment"
+        android:label="Notice"
+        tools:layout="@layout/fragment_notice" />
+</navigation>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Card_View="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_50"
+    tools:context=".ui.fragments.QuizArrangement">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/question_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            Card_View:boxBackgroundColor="@color/white"
+            Card_View:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/enter_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_weight="2"
+                android:hint="@string/question"
+                android:inputType="textMultiLine|textCapSentences"
+                android:lines="3"
+                android:maxLines="4"
+                android:minLines="1"
+                android:scrollbars="none"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/option1_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            Card_View:boxBackgroundColor="@color/white"
+            Card_View:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="@+id/question_material"
+            app:layout_constraintStart_toStartOf="@+id/question_material"
+            app:layout_constraintTop_toBottomOf="@+id/question_material">
+
+            <EditText
+                android:id="@+id/first_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:hint="@string/option_1"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/option2_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            Card_View:boxBackgroundColor="@color/white"
+            Card_View:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="@+id/option1_material"
+            app:layout_constraintStart_toStartOf="@+id/option1_material"
+            app:layout_constraintTop_toBottomOf="@+id/option1_material">
+
+            <EditText
+                android:id="@+id/second_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:hint="@string/option_2"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/option3_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            Card_View:boxBackgroundColor="@color/white"
+            Card_View:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="@+id/option2_material"
+            app:layout_constraintStart_toStartOf="@+id/option2_material"
+            app:layout_constraintTop_toBottomOf="@+id/option2_material">
+
+            <EditText
+                android:id="@+id/third_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:hint="@string/option_3"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/option4_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            Card_View:boxBackgroundColor="@color/white"
+            Card_View:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="@+id/option3_material"
+            app:layout_constraintStart_toStartOf="@+id/option3_material"
+            app:layout_constraintTop_toBottomOf="@+id/option3_material">
+
+            <EditText
+                android:id="@+id/forth_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:hint="@string/option_4"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/option4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/cO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_50"
+            android:text="@string/choose_correct_option"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal_size"
+            Card_View:layout_constraintHorizontal_bias="0.198"
+            app:layout_constraintEnd_toEndOf="@+id/option4_material"
+            app:layout_constraintStart_toStartOf="@+id/option4_material"
+            app:layout_constraintTop_toBottomOf="@+id/option4_material" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_20"
+            android:entries="@array/options"
+            Card_View:layout_constraintStart_toStartOf="@+id/cO"
+            Card_View:layout_constraintTop_toBottomOf="@+id/cO" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:background="@drawable/button_gradient"
+            android:text="@string/add"
+            android:textSize="@dimen/text_big_size"
+            Card_View:layout_constraintEnd_toEndOf="parent"
+            Card_View:layout_constraintStart_toStartOf="parent"
+            Card_View:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_50"
+            android:background="@drawable/button_gradient"
+            android:text="@string/update"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_big_size"
+            Card_View:layout_constraintEnd_toEndOf="parent"
+            Card_View:layout_constraintStart_toStartOf="parent"
+            Card_View:layout_constraintTop_toBottomOf="@+id/spinner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
